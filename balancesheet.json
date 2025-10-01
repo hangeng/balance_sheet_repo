@@ -1,0 +1,149 @@
+{
+    "assets": [
+        {
+            "ticker symbol": "DELL",
+            "fullname": "Dell Technology",
+            "positions": 3432,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
+            "ticker symbol": "MSTR",
+            "fullname": "MicroStrategy",
+            "positions": 154,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+
+        {
+            "ticker symbol": "QDII",
+            "fullname": "QDII ETF",
+            "positions":  626299,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Investments in US"
+        },
+
+        {
+            "ticker symbol": "513500.SS",
+            "fullname": "S&P 500 ETF",
+            "positions": 39700,
+            "share price": 0,
+            "currency unit": "CNY",
+            "category": "Investments in US"
+        },
+
+        {
+            "ticker symbol": "513100.SS",
+            "fullname": "Nasdaq 100 ETF",
+            "positions": 438800,
+            "share price": 0,
+            "currency unit": "CNY",
+            "category": "Investments in US"
+        },
+
+        {
+            "ticker symbol": "BTC-USD",
+            "fullname": "BTC",
+            "positions": 3,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Crypto to the Mars"
+        },
+        {
+            "ticker symbol": "DOGE-USD",
+            "fullname": "DOGE",
+            "positions": 90051,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Crypto to the Mars"
+        },
+
+        {
+            "ticker symbol": "IBKR",
+            "fullname": "Interactive Brokers",
+            "positions": 11.3898,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
+            "ticker symbol": "SOXL",
+            "fullname": "SOXL",
+            "positions": 4,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
+            "ticker symbol": "KYS",
+            "fullname": "Loan to KangYanSong",
+            "positions": 2776285,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans Receivables"
+        },
+        {
+            "ticker symbol": "QF",
+            "fullname": "Loan to QiFeng",
+            "positions": 200000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans Receivables"
+        },
+        {
+            "ticker symbol": "YQ",
+            "fullname": "Loan to YunQing",
+            "positions": 5000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans Receivables"
+        },
+        {
+            "ticker symbol": "HW",
+            "fullname": "Loan to HW",
+            "positions": 50000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans Receivables"
+        },
+        {
+            "ticker symbol": "GJ",
+            "fullname": "Loan to GaoJian",
+            "positions": 30000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans Receivables"
+        },
+
+        {
+            "ticker symbol": "Cash-CNY",
+            "fullname": "Cash in CNY",
+            "positions": 1495416,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Cash in CNY"
+        },
+        {
+            "ticker symbol": "CNY=X",
+            "fullname": "Cash in USD",
+            "positions": 0,
+            "share price": 0,
+            "currency unit": "CNY",
+            "category": "Cash in USD"
+        }
+    ],
+
+    "liabilities": [
+        {
+            "ticker symbol": "HouseLoan",
+            "fullname": "HouseLoan",
+            "positions": 178887,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Liabilities"
+        }
+    ]
+}
