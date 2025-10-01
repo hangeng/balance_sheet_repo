@@ -21,7 +21,7 @@ from pathlib import Path
 from typing import Optional
 
 sender = "hgcrhan@gmail.com"
-receivers = ["Geng.Han@dell.com", "sino_han@hotmail.com"]
+receivers = ["hgcrhan@gmail.com", "sino_han@hotmail.com"]
 
 message_template = """
 <html>
