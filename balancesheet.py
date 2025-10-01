@@ -376,6 +376,12 @@ class AssetsManager:
         df = df[df['Datetime'] != last_row['Datetime']]
         df.to_csv(self.balance_sheet_db, index=False)
 
+    def revert_legacy_assets_db(self):
+        df = pd.read_csv(self.legacy_asset_db)
+        last_row = df.iloc[-1]
+        df = df[df['Datetime'] != last_row['Datetime']]
+        df.to_csv(self.legacy_asset_db, index=False)
+
     def send_email(self):
         email_sender = EmailSender(sender=sender, receivers=receivers)
         email_sender.send_email_smtp_gmail(self.get_assets_text_report(), self.balance_sheet_chart, self.legacy_asset_curve)
