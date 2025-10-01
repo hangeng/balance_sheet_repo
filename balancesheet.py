@@ -285,7 +285,6 @@ class AssetsManager:
         plt.figure(figsize=(24, 12))   # Set the figure size
         df = pd.read_csv(self.legacy_asset_db)
         x = [datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S").date() for date_string in df['Datetime']]
-        # x = [i for i in range(len(df['Datetime']))]
         y1 = df['Assets']
         y2 = df['Liabilities']
         y3 = df['Investment']
@@ -295,7 +294,10 @@ class AssetsManager:
         # Formatting the date on x-axis
         plt.gcf().autofmt_xdate()
 
-        plt.title('Assets Curve')
+        plt.xticks(fontsize=18)  # Set font size for X-axis ticks  
+        plt.yticks(fontsize=18)  # Set font size for Y-axis ticks
+
+        plt.title('Assets Curve', fontsize=18, fontweight='bold')
         plt.grid(True)
         plt.savefig(self.legacy_asset_curve)
         plt.close()
