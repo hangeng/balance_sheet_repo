@@ -20,10 +20,8 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-
-
-sender="dpsim-bot@dell.com"
-receiver="Geng.Han@dell.com"
+sender = "hgcrhan@gmail.com"
+receivers = ["Geng.Han@dell.com", "sino_han@hotmail.com"]
 
 message_template = """
 <html>
@@ -31,7 +29,12 @@ message_template = """
 <pre style="font-family:courier;font-size:100%;">
 {message}
 </pre>
-<img src="cid:{image_cid}">
+<div style="text-align:center;">
+  <img src="cid:{cid1}" alt="Chart" style="max-width:100%; height:auto; display:inline-block;">
+</div>
+<div style="text-align:center;">
+  <img src="cid:{cid2}" alt="Chart" style="max-width:100%; height:auto; display:inline-block;">
+</div>
 </body>
 </html>
 """
@@ -43,63 +46,76 @@ def get_share_price(symbol):
     return stock.history(period='1d')['Close'].iloc[0]
 
 class EmailSender(object):
-    def __init__(self, sender, receiver):
-        self.this_user = None
-        try:
-            self.sender = sender
-            self.receivers = [receiver]
-            self.this_user = getuser()
-            self.hostname = socket.gethostname()
-            for remote_hostname in ("mailserver.xiolab.lab.emc.com", "mailhub.lss.emc.com"):
-                rc = os.system("ping -c 1 -w 2 {0} >/dev/null 2>&1".format(remote_hostname))
-                if rc == 0:
-                    self.smtpObj = smtplib.SMTP(remote_hostname, timeout=2)
-                    return
-            self.smtpObj = None
-        except Exception:
-            print ("EmailSender: failed to connect to mail server")
-            pass
+    def __init__(self, sender, receivers):
+        self.gmail_app_password = "nuim lgxe ptgb hdsj"
+        self.sender = sender
+        self.receivers = receivers
 
-    def send_email(self, message, image_file_name):
-        if self.smtpObj is None:
-            print ("send_email: failed to connect to mail server")
-            return
-        try:
-            with open(image_file_name, 'rb') as f:
-                img_data = f.read()
+    def send_email_smtp_gmail(self, message: str, new_balance_sheet_chart: str, legacy_asset_curve: str):
+        msg = self.prepare_email_msg(message, new_balance_sheet_chart, legacy_asset_curve)   
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+            smtp.login(self.sender, self.gmail_app_password)
+            smtp.send_message(msg)
+
+    def prepare_email_msg(self, message: str, new_balance_sheet_chart: str, legacy_asset_curve: str) -> EmailMessage:
+        """
+        Build an email with a text body and two embedded images, referenced inline via cid:.
     
-            msg = EmailMessage()
-            msg['Subject'] = 'PowerStore dpsim longevity run report'
-            msg['From'] = self.sender
-            msg['To'] = self.receivers
+        Args:
+            message: The text/HTML-safe body content (plain text; will be HTML-escaped minimally by wrapping).
+            new_balance_sheet_chart: Path to the first image file (e.g., PNG/JPEG).
+            legacy_asset_curve: Path to the second image file.
+    
+        Returns:
+            EmailMessage ready to send (set From/To/Subject before sending).
+        """
 
-            msg.set_content(message)
-
-            # now create a Content-ID for the image
-            image_cid = make_msgid(domain='dell.com')
-            # set an alternative html body
-            msg.add_alternative(message_template.format(message=message, image_cid=image_cid[1:-1]), subtype='html')
-            # image_cid looks like <long.random.number@xyz.com>
-            # to use it as the img src, we don't need `<` or `>`
-            # so we use [1:-1] to strip them off
-
-            # now open the image and attach it to the email
-            with open(image_file_name, 'rb') as img:
-                # know the Content-Type of the image
-                maintype, subtype = mimetypes.guess_type(img.name)[0].split('/')
-            
-                # attach it
-                msg.get_payload()[1].add_related(img.read(), 
-                                                 maintype=maintype,
-                                                 subtype=subtype,
-                                                 cid=image_cid)
-            # the message is ready now
-            # you can write it to a file
-            # or send it using smtplib
-            self.smtpObj.sendmail(self.sender, self.receivers, msg.as_string())
-            self.smtpObj.quit()
-        except Exception:
-            pass
+        # Create message container
+        msg = EmailMessage()
+        msg['Subject'] = 'Daily Assets Report'
+        msg['From'] = self.sender
+        msg['To'] = self.receivers
+        msg.set_content(message)
+    
+        # Plain text fallback (no images)
+        # Keep the plain text simple; some clients prefer/only display this part.
+        msg.set_content(message)
+    
+        # Generate content IDs for the inline images
+        cid1 = make_msgid(domain="inline.local")[1:-1]  # strip < >
+        cid2 = make_msgid(domain="inline.local")[1:-1]
+    
+        # Build HTML body that references the images by their content IDs
+    
+        # Add HTML alternative
+        msg.add_alternative(message_template.format(message=message, cid1=cid1, cid2=cid2), subtype="html")
+    
+        # Helper to attach an image inline to the HTML part
+        def _attach_inline_image(filename: str, cid: str):
+            path = Path(filename)
+            if not path.is_file():
+                raise FileNotFoundError(f"Image file not found: {path}")
+            ctype, encoding = mimetypes.guess_type(path.name)
+            if ctype is None or encoding is not None:
+                ctype = "application/octet-stream"
+            maintype, subtype = ctype.split("/", 1)
+            if maintype != "image":
+                raise ValueError(f"Unsupported image type for inline embedding: {ctype} ({path})")
+            with open(path, "rb") as f:
+                # Attach to the HTML alternative (the last part we added)
+                msg.get_payload()[-1].add_related(
+                    f.read(),
+                    maintype=maintype,
+                    subtype=subtype,
+                    cid=f"<{cid}>",
+                    filename=path.name,
+                )
+    
+        # Attach both images
+        _attach_inline_image(new_balance_sheet_chart, cid1)
+        _attach_inline_image(legacy_asset_curve, cid2)
+    
+        return msg
 
 class BalanceSheetItem:
     def __init__(self, ticker_symbol, fullname, positions, share_price, currency_unit, category):
@@ -130,6 +146,8 @@ class AssetsManager:
         self.balance_sheet_json_file = './balance_sheet_repo/balancesheet.json'
         self.balance_sheet_db = "./balance_sheet_repo/balancesheet.csv"
         self.balance_sheet_chart = "./balance_sheet_repo/balancesheet.png"
+        self.legacy_asset_db = "./balance_sheet_repo/assets_db.csv"
+        self.legacy_asset_curve = "./balance_sheet_repo/assets_curve.png"
         self.assets = []
         self.liabilities = []
         self.usd_and_cny_exchange_rate = 0
@@ -224,8 +242,11 @@ class AssetsManager:
 
         report_msg += self.get_seperator() + '\n'
 
+        # show the latest 10 days' assets history
+        df = pd.read_csv(self.legacy_asset_db)
+        report_msg += 'Last 10 days assets history:' + '\n'
+        report_msg += str(df.tail(10)) + '\n'
         return report_msg
-
 
     def update_balance_sheet_db(self):
         if os.path.exists(self.balance_sheet_db):
@@ -241,6 +262,43 @@ class AssetsManager:
             df.loc[len(df)] = new_row
 
         df.to_csv(self.balance_sheet_db, index=False)
+
+
+    def update_legacy_assets_db(self):
+        if os.path.exists(self.legacy_asset_db):
+            df = pd.read_csv(self.legacy_asset_db)
+        else:
+            df = pd.DataFrame(columns=['Datetime', 'Assets', 'Liabilities', 'Investment', 'Investment %', 'Net Value'])
+
+        net_value = self.get_total_book_value(self.assets) - self.get_total_book_value(self.liabilities)
+        new_row = [datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 
+                   self.get_total_book_value(self.assets),
+                   self.get_total_book_value(self.liabilities),
+                   self.get_investment_value(), self.get_investment_value() / net_value,
+                   net_value]
+
+        df.loc[len(df)] = new_row
+        df.to_csv(self.legacy_asset_db, index=False)
+
+
+    def generate_legacy_assets_curve(self):
+        plt.figure(figsize=(24, 12))   # Set the figure size
+        df = pd.read_csv(self.legacy_asset_db)
+        x = [datetime.strptime(date_string, "%Y-%m-%d %H:%M:%S").date() for date_string in df['Datetime']]
+        # x = [i for i in range(len(df['Datetime']))]
+        y1 = df['Assets']
+        y2 = df['Liabilities']
+        y3 = df['Investment']
+        y4 = df['Net Value']
+        plt.plot(x, y4, marker='o', color='b', label='Net Value')
+
+        # Formatting the date on x-axis
+        plt.gcf().autofmt_xdate()
+
+        plt.title('Assets Curve')
+        plt.grid(True)
+        plt.savefig(self.legacy_asset_curve)
+        plt.close()
 
     def summarize_balance_sheet_db(self):
         # generate category series
@@ -319,6 +377,6 @@ class AssetsManager:
         df.to_csv(self.balance_sheet_db, index=False)
 
     def send_email(self):
-        email_sender = EmailSender(sender=sender, receiver=receiver)
-        email_sender.send_email(self.get_assets_text_report(), self.balance_sheet_chart)
+        email_sender = EmailSender(sender=sender, receivers=receivers)
+        email_sender.send_email_smtp_gmail(self.get_assets_text_report(), self.balance_sheet_chart, self.legacy_asset_curve)
 
