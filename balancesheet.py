@@ -143,11 +143,11 @@ class BalanceSheetItem:
 
 class AssetsManager:
     def __init__(self):
-        self.balance_sheet_json_file = './balance_sheet_repo/balancesheet.json'
-        self.balance_sheet_db = "./balance_sheet_repo/balancesheet.csv"
-        self.balance_sheet_chart = "./balance_sheet_repo/balancesheet.png"
-        self.legacy_asset_db = "./balance_sheet_repo/assets_db.csv"
-        self.legacy_asset_curve = "./balance_sheet_repo/assets_curve.png"
+        self.balance_sheet_json_file = '/tmp/balance_sheet_repo/balancesheet.json'
+        self.balance_sheet_db = "/tmp/balance_sheet_repo/balancesheet.csv"
+        self.balance_sheet_chart = "/tmp/balance_sheet_repo/balancesheet.png"
+        self.legacy_asset_db = "/tmp/balance_sheet_repo/assets_db.csv"
+        self.legacy_asset_curve = "/tmp/balance_sheet_repo/assets_curve.png"
         self.assets = []
         self.liabilities = []
         self.usd_and_cny_exchange_rate = 0
