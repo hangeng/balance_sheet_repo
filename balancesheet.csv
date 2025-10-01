@@ -4918,4 +4918,3 @@ Datetime,Type,Ticker,Fullname,Positions,Share Price,Book Value,Category
 2025-09-30 20:00:41,Assets,Cash-CNY,Cash in CNY,1495416.0,1.0,1495416.0,Cash in CNY
 2025-09-30 20:00:41,Assets,CNY=X,Cash in USD,0.0,7.118500232696533,0.0,Cash in USD
 2025-09-30 20:00:41,Liabilities,HouseLoan,HouseLoan,178887.0,1.0,178887.0,Liabilities
-
