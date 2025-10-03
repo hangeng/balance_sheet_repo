@@ -233,12 +233,6 @@ class AssetsManager:
 
 
         net_value = self.get_total_book_value(self.assets) - self.get_total_book_value(self.liabilities)
-        report_msg += self.get_seperator() + '\n'
-        report_msg += '{:26s}: {:.4f}'.format("USD/CNY Rate",get_share_price('CNY=X')) + '\n'
-        for asset_category in self.book_value_per_category:
-            category_book_value = self.book_value_per_category[asset_category]
-            report_msg += '{:26s}: {:<10.2f} ({:.2f}%)'.format(asset_category, category_book_value, category_book_value / net_value * 100) + '\n'
-        report_msg += '{:26s}: {:<10.2f}'.format('Net Value', net_value) + '\n'
 
         report_msg += self.get_seperator() + '\n'
 
@@ -246,6 +240,15 @@ class AssetsManager:
         df = pd.read_csv(self.legacy_asset_db)
         report_msg += 'Last 10 days assets history:' + '\n'
         report_msg += str(df.tail(10)) + '\n'
+      
+        report_msg += self.get_seperator() + '\n'
+        report_msg += '{:26s}: {:.4f}'.format("USD/CNY Rate",get_share_price('CNY=X')) + '\n'
+        for asset_category in self.book_value_per_category:
+            category_book_value = self.book_value_per_category[asset_category]
+            report_msg += '{:26s}: {:<10.2f} ({:.2f}%)'.format(asset_category, category_book_value, category_book_value / net_value * 100) + '\n'
+        report_msg += '{:26s}: {:<10.2f}'.format('Net Value', net_value) + '\n'
+
+
         return report_msg
 
     def update_balance_sheet_db(self):
