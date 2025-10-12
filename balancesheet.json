@@ -80,7 +80,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2772285,
+            "positions": 2770285,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -121,7 +121,7 @@
         {
             "ticker symbol": "Cash-CNY",
             "fullname": "Cash in CNY",
-            "positions": 1498024,
+            "positions": 1500024,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
