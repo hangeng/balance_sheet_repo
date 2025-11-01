@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  649015,
+            "positions":  716364,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -29,12 +29,20 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 39700,
+            "positions": 49800,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
         },
-
+        
+        {
+            "ticker symbol": "159501.SS",
+            "fullname": "Harvest Fund Nasdaq 100",
+            "positions": 40900,
+            "share price": 0,
+            "currency unit": "CNY",
+            "category": "Investments in US"
+        },
         {
             "ticker symbol": "513100.SS",
             "fullname": "Nasdaq 100 ETF",
@@ -80,7 +88,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2766285,
+            "positions": 2762285,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -121,7 +129,7 @@
         {
             "ticker symbol": "Cash-CNY",
             "fullname": "Cash in CNY",
-            "positions": 4661709,
+            "positions": 4576116,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
