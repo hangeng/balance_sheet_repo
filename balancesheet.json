@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  706969,
+            "positions":  726393,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -88,7 +88,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2754285,
+            "positions": 2742285,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -129,7 +129,7 @@
         {
             "ticker symbol": "Cash-CNY",
             "fullname": "Cash in CNY",
-            "positions": 4375820,
+            "positions": 4419028,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -148,7 +148,7 @@
         {
             "ticker symbol": "HouseLoan",
             "fullname": "HouseLoan",
-            "positions": 175838,
+            "positions": 172782,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
