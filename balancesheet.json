@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  726393,
+            "positions":  745290,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -29,7 +29,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 90700,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -38,7 +38,7 @@
         {
             "ticker symbol": "159501.SZ",
             "fullname": "Harvest Fund Nasdaq 100",
-            "positions": 95900,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -46,7 +46,7 @@
         {
             "ticker symbol": "513100.SS",
             "fullname": "Nasdaq 100 ETF",
-            "positions": 438800,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -129,7 +129,7 @@
         {
             "ticker symbol": "Cash-CNY",
             "fullname": "Cash in CNY",
-            "positions": 4419028,
+            "positions": 5644104,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
