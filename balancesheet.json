@@ -130,7 +130,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 3880000,
+            "positions": 1336126,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -138,7 +138,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 1336000,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
