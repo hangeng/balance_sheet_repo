@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  745290,
+            "positions":  755265,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -88,7 +88,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2742285,
+            "positions": 2733285,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -110,26 +110,27 @@
             "category": "Loans Receivables"
         },
         {
-            "ticker symbol": "HW",
-            "fullname": "Loan to HW",
-            "positions": 50000,
-            "share price": 1,
-            "currency unit": "CNY",
-            "category": "Loans Receivables"
-        },
-        {
             "ticker symbol": "GJ",
             "fullname": "Loan to GaoJian",
-            "positions": 30000,
+            "positions": 40000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
         },
 
         {
-            "ticker symbol": "Cash-CNY",
+            "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 5644104,
+            "positions": 3880000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Cash in CNY"
+        },
+
+        {
+            "ticker symbol": "Cash-CNY-Geng",
+            "fullname": "Cash in CNY",
+            "positions": 3880000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -137,7 +138,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 0,
+            "positions": 1336000,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
@@ -148,7 +149,7 @@
         {
             "ticker symbol": "HouseLoan",
             "fullname": "HouseLoan",
-            "positions": 172782,
+            "positions": 169718,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
