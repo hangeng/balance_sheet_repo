@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  755265,
+            "positions":  766085,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -29,7 +29,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 0,
+            "positions": 47300,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -38,7 +38,7 @@
         {
             "ticker symbol": "159501.SZ",
             "fullname": "Harvest Fund Nasdaq 100",
-            "positions": 0,
+            "positions": 65500,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -55,7 +55,7 @@
         {
             "ticker symbol": "BTC-USD",
             "fullname": "BTC",
-            "positions": 3,
+            "positions": 3.094325,
             "share price": 0,
             "currency unit": "USD",
             "category": "Crypto to the Mars"
@@ -88,7 +88,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2733285,
+            "positions": 2729285,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -109,14 +109,6 @@
             "currency unit": "CNY",
             "category": "Loans Receivables"
         },
-        {
-            "ticker symbol": "GJ",
-            "fullname": "Loan to GaoJian",
-            "positions": 40000,
-            "share price": 1,
-            "currency unit": "CNY",
-            "category": "Loans Receivables"
-        },
 
         {
             "ticker symbol": "Cash-CNY-Bian",
@@ -130,7 +122,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 1345354,
+            "positions": 1116319,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
