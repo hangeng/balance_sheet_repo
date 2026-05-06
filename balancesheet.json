@@ -78,14 +78,6 @@
             "category": "Investments in US"
         },
         {
-            "ticker symbol": "SOXL",
-            "fullname": "SOXL",
-            "positions": 4,
-            "share price": 0,
-            "currency unit": "USD",
-            "category": "Investments in US"
-        },
-        {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
             "positions": 2786738,
@@ -130,7 +122,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 0,
+            "positions": 777,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
