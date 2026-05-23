@@ -20,7 +20,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  1050886,
+            "positions":  1074371,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -114,7 +114,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 1088400,
+            "positions": 1228555,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -133,7 +133,7 @@
         {
             "ticker symbol": "HouseLoan",
             "fullname": "HouseLoan",
-            "positions": 157263,
+            "positions": 154130,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
