@@ -3,7 +3,7 @@
         {
             "ticker symbol": "DELL",
             "fullname": "Dell Technology",
-            "positions": 3700,
+            "positions": 3703,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -80,7 +80,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2786738,
+            "positions": 2781738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -122,7 +122,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 777,
+            "positions": 365,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
