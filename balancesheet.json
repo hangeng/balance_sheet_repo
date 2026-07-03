@@ -38,7 +38,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 236900,
+            "positions": 295100,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -46,7 +46,7 @@
         {
             "ticker symbol": "513100.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 295100,
+            "positions": 236900,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -54,7 +54,7 @@
         {
             "ticker symbol": "159501.SZ",
             "fullname": "Harvest Fund Nasdaq 100",
-            "positions": 376600,
+            "positions": 669600,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -121,7 +121,7 @@
         {
             "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 3960000,
+            "positions": 3760000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -130,7 +130,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 490100,
+            "positions": 34456,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -138,7 +138,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 100000,
+            "positions": 110000,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
