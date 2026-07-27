@@ -135,5 +135,18 @@
             "currency unit": "CNY",
             "category": "Cash in USD"
         }
+    ],
+    "liabilities": 
+    [
+        {
+            "ticker symbol": "Credit loan",
+            "fullname": "Credit loan",
+            "positions": 300000,
+            "share price": 1,
+            "currency unit": "CNY",
+            "category": "Loans"
+        }
     ]
+
+    
 }
