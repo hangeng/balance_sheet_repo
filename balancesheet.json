@@ -59,14 +59,6 @@
             "currency unit": "CNY",
             "category": "Investments in US"
         },
-        {
-            "ticker symbol": "513100.SS",
-            "fullname": "Nasdaq 100 ETF",
-            "positions": 0,
-            "share price": 0,
-            "currency unit": "CNY",
-            "category": "Investments in US"
-        },
 
         {
             "ticker symbol": "BTC-USD",
