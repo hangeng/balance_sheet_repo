@@ -54,7 +54,7 @@
         {
             "ticker symbol": "159501.SZ",
             "fullname": "Harvest Fund Nasdaq 100",
-            "positions": 1142900,
+            "positions": 1386500,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -113,7 +113,7 @@
         {
             "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 3160000,
+            "positions": 2320000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -122,7 +122,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 28597,
+            "positions": 100000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -130,7 +130,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 110000,
+            "positions": 130691,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
@@ -139,9 +139,9 @@
     "liabilities": 
     [
         {
-            "ticker symbol": "Credit loan",
+            "ticker symbol": "Liabilities",
             "fullname": "Credit loan",
-            "positions": 300000,
+            "positions": 600000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
