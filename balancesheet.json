@@ -12,7 +12,7 @@
         {
             "ticker symbol": "SPCX",
             "fullname": "SpaceX",
-            "positions": 1,
+            "positions": 91,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -29,7 +29,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  1077640,
+            "positions":  1081175,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -88,7 +88,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2777738,
+            "positions": 2776738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -122,7 +122,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 1000000,
+            "positions": 98762,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -130,7 +130,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 130691,
+            "positions": 168980,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
@@ -141,7 +141,7 @@
         {
             "ticker symbol": "Liabilities",
             "fullname": "Credit loan",
-            "positions": 600000,
+            "positions": 0,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
