@@ -10,6 +10,38 @@
             "category": "Investments in US"
         },
         {
+            "ticker symbol": "Pre-tax 401k",
+            "fullname": "PTX401K",
+            "positions": 1897,
+            "share price": 1,
+            "currency unit": "USD",
+            "category": "Retirement"
+        },
+        {
+            "ticker symbol": "Roth 401k",
+            "fullname": "ROTH401K",
+            "positions": 0,
+            "share price": 1,
+            "currency unit": "USD",
+            "category": "Retirement"
+        },
+        {
+            "ticker symbol": "Roth IRA",
+            "fullname": "ROTHIRA",
+            "positions": 0,
+            "share price": 1,
+            "currency unit": "USD",
+            "category": "Retirement"
+        },
+        {
+            "ticker symbol": "HSA",
+            "fullname": "HSA",
+            "positions": 0,
+            "share price": 1,
+            "currency unit": "USD",
+            "category": "Retirement"
+        },
+        {
             "ticker symbol": "SPCX",
             "fullname": "SpaceX",
             "positions": 91,
