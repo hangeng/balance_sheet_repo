@@ -50,6 +50,22 @@
             "category": "Investments in US"
         },
         {
+            "ticker symbol": "SKHY",
+            "fullname": "SK Hynix",
+            "positions": 147,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
+            "ticker symbol": "TSLA",
+            "fullname": "Tesla",
+            "positions": 30,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
             "ticker symbol": "MSTR",
             "fullname": "MicroStrategy",
             "positions": 154,
