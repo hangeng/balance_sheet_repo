@@ -60,7 +60,7 @@
         {
             "ticker symbol": "TSLA",
             "fullname": "Tesla",
-            "positions": 30,
+            "positions": 76,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 138980,
+            "positions": 123980,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
