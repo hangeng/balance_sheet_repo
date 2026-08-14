@@ -66,6 +66,14 @@
             "category": "Investments in US"
         },
         {
+            "ticker symbol": "INTC",
+            "fullname": "Intel",
+            "positions": 146,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
             "ticker symbol": "MSTR",
             "fullname": "MicroStrategy",
             "positions": 154,
@@ -170,7 +178,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 98762,
+            "positions": 195524,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -178,7 +186,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 123980,
+            "positions": 166351,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
