@@ -10,35 +10,35 @@
             "category": "Investments in US"
         },
         {
-            "ticker symbol": "Pre-tax 401k",
-            "fullname": "PTX401K",
-            "positions": 1897,
-            "share price": 1,
-            "currency unit": "USD",
+            "ticker symbol": "CNY=X",
+            "fullname": "Pre-tax 401k",
+            "positions": 1911,
+            "share price": 0,
+            "currency unit": "CNY",
             "category": "Retirement"
         },
         {
-            "ticker symbol": "Roth 401k",
+            "ticker symbol": "CNY=X",
             "fullname": "ROTH401K",
             "positions": 0,
-            "share price": 1,
-            "currency unit": "USD",
+            "share price": 0,
+            "currency unit": "CNY",
             "category": "Retirement"
         },
         {
-            "ticker symbol": "Roth IRA",
+            "ticker symbol": "CNY=X",
             "fullname": "ROTHIRA",
             "positions": 0,
-            "share price": 1,
-            "currency unit": "USD",
+            "share price": 0,
+            "currency unit": "CNY",
             "category": "Retirement"
         },
         {
-            "ticker symbol": "HSA",
+            "ticker symbol": "CNY=X",
             "fullname": "HSA",
             "positions": 0,
-            "share price": 1,
-            "currency unit": "USD",
+            "share price": 0,
+            "currency unit": "CNY",
             "category": "Retirement"
         },
         {
@@ -144,7 +144,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2776738,
+            "positions": 2772738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 195524,
+            "positions": 197555,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
