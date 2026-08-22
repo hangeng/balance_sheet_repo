@@ -12,7 +12,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Pre-tax 401k",
-            "positions": 1911,
+            "positions": 8555,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Retirement"
@@ -68,7 +68,7 @@
         {
             "ticker symbol": "INTC",
             "fullname": "Intel",
-            "positions": 146,
+            "positions": 346,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 197555,
+            "positions": 190571,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -186,7 +186,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 166351,
+            "positions": 139096,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
