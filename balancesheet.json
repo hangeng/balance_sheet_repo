@@ -11,24 +11,8 @@
         },
         {
             "ticker symbol": "CNY=X",
-            "fullname": "Pre-tax 401k",
-            "positions": 8555,
-            "share price": 0,
-            "currency unit": "CNY",
-            "category": "Retirement"
-        },
-        {
-            "ticker symbol": "CNY=X",
-            "fullname": "ROTH401K",
-            "positions": 0,
-            "share price": 0,
-            "currency unit": "CNY",
-            "category": "Retirement"
-        },
-        {
-            "ticker symbol": "CNY=X",
-            "fullname": "ROTHIRA",
-            "positions": 0,
+            "fullname": "401k",
+            "positions": 8040,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Retirement"
