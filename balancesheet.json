@@ -68,7 +68,15 @@
         {
             "ticker symbol": "INTC",
             "fullname": "Intel",
-            "positions": 346,
+            "positions": 461,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
+        {
+            "ticker symbol": "MU",
+            "fullname": "Micron",
+            "positions": 3.779,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -94,7 +102,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 295400,
+            "positions": 464300,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -144,7 +152,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2772738,
+            "positions": 2758738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -169,7 +177,7 @@
         {
             "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 2320000,
+            "positions": 2020000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -178,7 +186,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 190571,
+            "positions": 43058,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -186,7 +194,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 139096,
+            "positions": 60818,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
