@@ -4,7 +4,7 @@
         {
             "ticker symbol": "DELL",
             "fullname": "Dell Technology",
-            "positions": 3702,
+            "positions": 3000,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 60818,
+            "positions": 436096,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
