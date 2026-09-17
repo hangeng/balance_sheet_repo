@@ -12,7 +12,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "401k",
-            "positions": 8040,
+            "positions": 10991,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Retirement"
@@ -20,15 +20,15 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "HSA",
-            "positions": 2250,
+            "positions": 3062,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Retirement"
         },
         {
-            "ticker symbol": "SPCX",
-            "fullname": "SpaceX",
-            "positions": 91,
+            "ticker symbol": "ARM",
+            "fullname": "Arm",
+            "positions": 103.964,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -52,7 +52,7 @@
         {
             "ticker symbol": "INTC",
             "fullname": "Intel",
-            "positions": 461,
+            "positions": 964.15,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -86,7 +86,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 464300,
+            "positions": 841200,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -161,7 +161,7 @@
         {
             "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 2020000,
+            "positions": 1020000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -170,7 +170,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 43058,
+            "positions": 54548,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 436096,
+            "positions": 391567.91,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
