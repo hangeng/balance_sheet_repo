@@ -189,7 +189,7 @@
         {
             "ticker symbol": "Liabilities",
             "fullname": "Credit loan",
-            "positions": 0,
+            "positions": 1300000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Liabilities"
