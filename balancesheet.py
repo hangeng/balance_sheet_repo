@@ -136,6 +136,8 @@ class BalanceSheetItem:
             if self.currency_unit == 'CNY':
                 self.share_price = self.share_price / self.usd_and_cny_exchange_rate
 
+        self.share_price = round(self.share_price, 2)
+
 
     def get_book_value(self):
         return self.positions * self.share_price 
@@ -411,3 +413,4 @@ class AssetsManager:
     def send_email(self):
         email_sender = EmailSender(sender=sender, receivers=receivers)
         email_sender.send_email_smtp_gmail(self.get_assets_text_report(), self.balance_sheet_chart, self.legacy_asset_curve)
+
