@@ -130,8 +130,11 @@ class BalanceSheetItem:
 
         if self.initial_share_price == 0:
             self.share_price = get_share_price(self.ticker_symbol)
-            if self.currency_unit == 'USD':
-                self.share_price = self.share_price * self.usd_and_cny_exchange_rate
+            if self.currency_unit == 'CNY':
+                self.share_price = self.share_price / self.usd_and_cny_exchange_rate
+        else:
+            if self.currency_unit == 'CNY':
+                self.share_price = self.share_price / self.usd_and_cny_exchange_rate
 
 
     def get_book_value(self):
@@ -203,7 +206,7 @@ class AssetsManager:
         print (self.get_seperator())
 
     def get_seperator(self):
-        return '-'*70
+        return '-'*100
 
     def show_assets(self):
         print (self.get_assets_text_report())
@@ -229,7 +232,16 @@ class AssetsManager:
                                 'Positions',
                                 'Share Price',
                                 'Book Value'])
-            report_msg += str(df) + '\n'
+            report_msg += df.to_string(
+                formatters={
+                    'Ticker':      lambda x: f'{x:<16s}' if isinstance(x, str) else x,
+                    'Fullname':    lambda x: f'{x:<28s}' if isinstance(x, str) else x,
+                    'Positions':   lambda x: f'{x:>16,.2f}' if isinstance(x, (int, float)) else f'{x:>16s}',
+                    'Share Price': lambda x: f'{x:>14,.2f}' if isinstance(x, (int, float)) else f'{x:>14s}',
+                    'Book Value':  lambda x: f'{x:>16,.2f}' if isinstance(x, (int, float)) else f'{x:>16s}',
+                },
+                index=False,
+            ) + '\n'
 
 
         net_value = self.get_total_book_value(self.assets) - self.get_total_book_value(self.liabilities)
@@ -239,14 +251,23 @@ class AssetsManager:
         # show the latest 10 days' assets history
         df = pd.read_csv(self.legacy_asset_db)
         report_msg += 'Last 10 days assets history:' + '\n'
-        report_msg += str(df.tail(10)) + '\n'
+        def _fmt_money(x):
+            return f'{x:>16,.2f}' if isinstance(x, (int, float)) else x
+        def _fmt_pct(x):
+            return f'{x:>14.4f}' if isinstance(x, (int, float)) else x
+        def _fmt_datetime(x):
+            return f'{x:<22s}' if isinstance(x, str) else x
+        fmts = {c: _fmt_money for c in ['Assets', 'Liabilities', 'Investment', 'Net Value']}
+        fmts['Investment %'] = _fmt_pct
+        fmts['Datetime'] = _fmt_datetime
+        report_msg += df.tail(10).to_string(formatters=fmts, index=False) + '\n'
       
         report_msg += self.get_seperator() + '\n'
         report_msg += '{:26s}: {:.4f}'.format("USD/CNY Rate",get_share_price('CNY=X')) + '\n'
         for asset_category in self.book_value_per_category:
             category_book_value = self.book_value_per_category[asset_category]
-            report_msg += '{:26s}: {:<10.2f} ({:.2f}%)'.format(asset_category, category_book_value, category_book_value / net_value * 100) + '\n'
-        report_msg += '{:26s}: {:<10.2f}'.format('Net Value', net_value) + '\n'
+            report_msg += '{:26s}: {:>14s} ({:.2f}%)'.format(asset_category, f'{category_book_value:,.2f}', category_book_value / net_value * 100) + '\n'
+        report_msg += '{:26s}: {:>14s}'.format('Net Value', f'{net_value:,.2f}') + '\n'
 
 
         return report_msg
@@ -390,4 +411,3 @@ class AssetsManager:
     def send_email(self):
         email_sender = EmailSender(sender=sender, receivers=receivers)
         email_sender.send_email_smtp_gmail(self.get_assets_text_report(), self.balance_sheet_chart, self.legacy_asset_curve)
-
