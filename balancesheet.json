@@ -13,16 +13,16 @@
             "ticker symbol": "CNY=X",
             "fullname": "401k",
             "positions": 10991,
-            "share price": 0,
-            "currency unit": "CNY",
+            "share price": 1,
+            "currency unit": "USD",
             "category": "Retirement"
         },
         {
             "ticker symbol": "CNY=X",
             "fullname": "HSA",
             "positions": 3062,
-            "share price": 0,
-            "currency unit": "CNY",
+            "share price": 1,
+            "currency unit": "USD",
             "category": "Retirement"
         },
         {
@@ -179,8 +179,8 @@
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
             "positions": 388253,
-            "share price": 0,
-            "currency unit": "CNY",
+            "share price": 1,
+            "currency unit": "USD",
             "category": "Cash in USD"
         }
     ],
