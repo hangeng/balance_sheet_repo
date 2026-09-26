@@ -10,7 +10,7 @@
             "category": "Investments in US"
         },
         {
-            "ticker symbol": "CNY=X",
+            "ticker symbol": "401k",
             "fullname": "401k",
             "positions": 10991,
             "share price": 1,
@@ -18,7 +18,7 @@
             "category": "Retirement"
         },
         {
-            "ticker symbol": "CNY=X",
+            "ticker symbol": "HSA",
             "fullname": "HSA",
             "positions": 3062,
             "share price": 1,
