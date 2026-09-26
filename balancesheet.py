@@ -228,22 +228,24 @@ class AssetsManager:
 
             pd_data.append(['Total', '', '', '', self.get_total_book_value(balance_sheet_category)])
 
-            df = pd.DataFrame(pd_data, columns=[
-                                'Ticker',
-                                'Fullname',
-                                'Positions',
-                                'Share Price',
-                                'Book Value'])
-            report_msg += df.to_string(
-                formatters={
-                    'Ticker':      lambda x: f'{x:<16s}' if isinstance(x, str) else x,
-                    'Fullname':    lambda x: f'{x:<28s}' if isinstance(x, str) else x,
-                    'Positions':   lambda x: f'{x:>16,.2f}' if isinstance(x, (int, float)) else f'{x:>16s}',
-                    'Share Price': lambda x: f'{x:>14,.2f}' if isinstance(x, (int, float)) else f'{x:>14s}',
-                    'Book Value':  lambda x: f'{x:>16,.2f}' if isinstance(x, (int, float)) else f'{x:>16s}',
-                },
-                index=False,
-            ) + '\n'
+            col_fmts = [
+                ('Ticker',      '<', 16),
+                ('Fullname',    '<', 28),
+                ('Positions',   '>', 16),
+                ('Share Price', '>', 14),
+                ('Book Value',  '>', 16),
+            ]
+            header = '  '.join(f'{name:{align}{width}s}' for name, align, width in col_fmts)
+            rows = []
+            for row in pd_data:
+                cells = []
+                for val, (_, align, width) in zip(row, col_fmts):
+                    if isinstance(val, (int, float)):
+                        cells.append(f'{val:{align}{width},.2f}')
+                    else:
+                        cells.append(f'{val:{align}{width}s}')
+                rows.append('  '.join(cells))
+            report_msg += header + '\n' + '\n'.join(rows) + '\n'
 
 
         net_value = self.get_total_book_value(self.assets) - self.get_total_book_value(self.liabilities)
@@ -253,16 +255,26 @@ class AssetsManager:
         # show the latest 10 days' assets history
         df = pd.read_csv(self.legacy_asset_db)
         report_msg += 'Last 10 days assets history:' + '\n'
-        def _fmt_money(x):
-            return f'{x:>16,.2f}' if isinstance(x, (int, float)) else x
-        def _fmt_pct(x):
-            return f'{x:>14.4f}' if isinstance(x, (int, float)) else x
-        def _fmt_datetime(x):
-            return f'{x:<22s}' if isinstance(x, str) else x
-        fmts = {c: _fmt_money for c in ['Assets', 'Liabilities', 'Investment', 'Net Value']}
-        fmts['Investment %'] = _fmt_pct
-        fmts['Datetime'] = _fmt_datetime
-        report_msg += df.tail(10).to_string(formatters=fmts, index=False) + '\n'
+        hist_fmts = [
+            ('Datetime',      '<', 22, 's'),
+            ('Assets',        '>', 16, ',.2f'),
+            ('Liabilities',   '>', 16, ',.2f'),
+            ('Investment',    '>', 16, ',.2f'),
+            ('Investment %',  '>', 14, '.4f'),
+            ('Net Value',     '>', 16, ',.2f'),
+        ]
+        header = '  '.join(f'{name:{align}{width}s}' for name, align, width, _ in hist_fmts)
+        rows = []
+        for _, row in df.tail(10).iterrows():
+            cells = []
+            for name, align, width, fmt in hist_fmts:
+                val = row[name]
+                if isinstance(val, (int, float)):
+                    cells.append(f'{val:{align}{width}{fmt}}')
+                else:
+                    cells.append(f'{val:{align}{width}s}')
+            rows.append('  '.join(cells))
+        report_msg += header + '\n' + '\n'.join(rows) + '\n'
       
         report_msg += self.get_seperator() + '\n'
         report_msg += '{:26s}: {:.4f}'.format("USD/CNY Rate",get_share_price('CNY=X')) + '\n'
@@ -413,4 +425,3 @@ class AssetsManager:
     def send_email(self):
         email_sender = EmailSender(sender=sender, receivers=receivers)
         email_sender.send_email_smtp_gmail(self.get_assets_text_report(), self.balance_sheet_chart, self.legacy_asset_curve)
-
