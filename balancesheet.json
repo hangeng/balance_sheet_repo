@@ -77,7 +77,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  1099268,
+            "positions":  1100675,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "CNY=X",
             "fullname": "Cash in USD",
-            "positions": 391567.91,
+            "positions": 388253,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Cash in USD"
