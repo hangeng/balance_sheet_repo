@@ -176,7 +176,7 @@
             "category": "Cash in CNY"
         },
         {
-            "ticker symbol": "CNY=X",
+            "ticker symbol": "Cash-USD",
             "fullname": "Cash in USD",
             "positions": 388253,
             "share price": 1,
