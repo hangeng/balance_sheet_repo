@@ -12,7 +12,7 @@
         {
             "ticker symbol": "401k",
             "fullname": "401k",
-            "positions": 10991,
+            "positions": 14278,
             "share price": 1,
             "currency unit": "USD",
             "category": "Retirement"
@@ -20,7 +20,7 @@
         {
             "ticker symbol": "HSA",
             "fullname": "HSA",
-            "positions": 3062,
+            "positions": 3875,
             "share price": 1,
             "currency unit": "USD",
             "category": "Retirement"
@@ -28,7 +28,7 @@
         {
             "ticker symbol": "ARM",
             "fullname": "Arm",
-            "positions": 103.964,
+            "positions": 126.365,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -42,9 +42,9 @@
             "category": "Investments in US"
         },
         {
-            "ticker symbol": "TSLA",
-            "fullname": "Tesla",
-            "positions": 76,
+            "ticker symbol": "SMH",
+            "fullname": "VanEck Semiconductor ETF",
+            "positions": 91.974,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -77,7 +77,7 @@
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
-            "positions":  1100675,
+            "positions":  1094964,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -94,7 +94,7 @@
         {
             "ticker symbol": "513100.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 236900,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -102,7 +102,7 @@
         {
             "ticker symbol": "159501.SZ",
             "fullname": "Harvest Fund Nasdaq 100",
-            "positions": 1386500,
+            "positions": 0,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -136,7 +136,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2752738,
+            "positions": 2750738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -170,7 +170,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 38172,
+            "positions": 1309224,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -178,7 +178,7 @@
         {
             "ticker symbol": "Cash-USD",
             "fullname": "Cash in USD",
-            "positions": 388253,
+            "positions": 740983,
             "share price": 1,
             "currency unit": "USD",
             "category": "Cash in USD"
