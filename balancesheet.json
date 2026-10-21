@@ -4,7 +4,7 @@
         {
             "ticker symbol": "DELL",
             "fullname": "Dell Technology",
-            "positions": 3000,
+            "positions": 3720.27,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -73,7 +73,14 @@
             "currency unit": "USD",
             "category": "Investments in US"
         },
-
+        {
+            "ticker symbol": "NBIS",
+            "fullname": "Nebius",
+            "positions": 613.12,
+            "share price": 0,
+            "currency unit": "USD",
+            "category": "Investments in US"
+        },
         {
             "ticker symbol": "QDII",
             "fullname": "QDII ETF",
@@ -136,7 +143,7 @@
         {
             "ticker symbol": "KYS",
             "fullname": "Loan to KangYanSong",
-            "positions": 2750738,
+            "positions": 2746738,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Loans Receivables"
@@ -161,7 +168,7 @@
         {
             "ticker symbol": "Cash-CNY-Bian",
             "fullname": "Cash in CNY",
-            "positions": 1920000,
+            "positions": 920000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -170,7 +177,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 1309224,
+            "positions": 6201898,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -178,7 +185,7 @@
         {
             "ticker symbol": "Cash-USD",
             "fullname": "Cash in USD",
-            "positions": 740983,
+            "positions": 108056,
             "share price": 1,
             "currency unit": "USD",
             "category": "Cash in USD"
