@@ -52,7 +52,7 @@
         {
             "ticker symbol": "INTC",
             "fullname": "Intel",
-            "positions": 964.15,
+            "positions": 1557.42,
             "share price": 0,
             "currency unit": "USD",
             "category": "Investments in US"
@@ -93,7 +93,7 @@
         {
             "ticker symbol": "513500.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 841200,
+            "positions": 2767900,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -101,7 +101,7 @@
         {
             "ticker symbol": "513100.SS",
             "fullname": "S&P 500 ETF",
-            "positions": 0,
+            "positions": 453500,
             "share price": 0,
             "currency unit": "CNY",
             "category": "Investments in US"
@@ -177,7 +177,7 @@
         {
             "ticker symbol": "Cash-CNY-Geng",
             "fullname": "Cash in CNY",
-            "positions": 6201898,
+            "positions": 11000,
             "share price": 1,
             "currency unit": "CNY",
             "category": "Cash in CNY"
@@ -185,7 +185,7 @@
         {
             "ticker symbol": "Cash-USD",
             "fullname": "Cash in USD",
-            "positions": 108056,
+            "positions": 60230,
             "share price": 1,
             "currency unit": "USD",
             "category": "Cash in USD"
